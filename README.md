@@ -37,18 +37,16 @@ Os dados extraídos são armazenados em arquivos CSV e em um banco de dados rela
 
 Clone este repositório e instale as dependências:
 
-```bash
+
 git clone https://github.com/seuusuario/seurepositorio.git
 cd seurepositorio
 pip install -r requirements.txt
 Se preferir instalar manualmente:
 
-bash
-Copiar código
+
 pip install pandas selenium sqlalchemy webdriver-manager psycopg2-binary pymysql
 Como Executar
-bash
-Copiar código
+
 python scraper.py
 O script irá:
 
@@ -66,8 +64,7 @@ Banco de Dados
 Por padrão, os dados são salvos em SQLite (produtos.db).
 Para usar outro banco, ajuste os parâmetros da função send_to_database():
 
-python
-Copiar código
+
 send_to_database(df, table_name="minha_tabela", db_type="postgresql",
                  db_name="meubanco", user="usuario", password="senha",
                  host="localhost", port=5432)
@@ -96,14 +93,11 @@ A Amazon pode alterar o layout de sua página, exigindo ajustes nos seletores.
 
 Evite reduzir o tempo entre as requisições para não ser bloqueado.
 
-yaml
-Copiar código
 
 ---
 
 ## 📦 requirements.txt  
 
-```markdown
 pandas
 selenium
 sqlalchemy
